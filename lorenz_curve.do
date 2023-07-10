@@ -5,15 +5,18 @@ clear all
 
 * creat dataset 
 
-input hhid setA setB setC
+input hhid setA setB setC setD 
 
-1	2000	1500	1000
-2	3000	2500	1000
-3	4000	3500	1000
-4	5000	4500	1000
-5	6000	5500	1000
+1	2000	1500	1000 	1000 	
+2	3000	2500	1000 	1000 	
+3	4000	3500	1000 	2000 	
+4	5000	4500	1000 	2000 	
+5	6000	5500	1000 	50000 	
 
 end 
+
+* sum-stat 
+sum set* 
 
 * reshape dataset to use glcurve 
 reshape long set, i(hhid) j(group) string
